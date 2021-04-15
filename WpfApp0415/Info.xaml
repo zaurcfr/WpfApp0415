@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApp0415.Info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp0415"
+        mc:Ignorable="d"
+        Title="Info" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Label FontSize="24">Vendor</Label>
+            <TextBlock Text="{Binding InfoCar.Vendor,UpdateSourceTrigger=PropertyChanged}" FontSize="24"></TextBlock>
+            <Label FontSize="24">Model</Label>
+            <TextBlock Text="{Binding InfoCar.Model,UpdateSourceTrigger=PropertyChanged}" FontSize="24"></TextBlock>
+            <Label FontSize="24">Year</Label>
+            <TextBlock Text="{Binding InfoCar.Year,UpdateSourceTrigger=PropertyChanged}" FontSize="24"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
