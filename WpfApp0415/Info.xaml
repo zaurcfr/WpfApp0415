@@ -8,12 +8,12 @@
         Title="Info" Height="450" Width="800">
     <Grid>
         <StackPanel>
-            <Label FontSize="24">Vendor</Label>
-            <TextBlock Text="{Binding InfoCar.Vendor,UpdateSourceTrigger=PropertyChanged}" FontSize="24"></TextBlock>
-            <Label FontSize="24">Model</Label>
-            <TextBlock Text="{Binding InfoCar.Model,UpdateSourceTrigger=PropertyChanged}" FontSize="24"></TextBlock>
-            <Label FontSize="24">Year</Label>
-            <TextBlock Text="{Binding InfoCar.Year,UpdateSourceTrigger=PropertyChanged}" FontSize="24"></TextBlock>
+            <Label FontSize="16">Vendor</Label>
+            <TextBox Text="{Binding Car.Vendor,UpdateSourceTrigger=PropertyChanged}" FontSize="24"></TextBox>
+            <Label FontSize="16">Model</Label>
+            <TextBox Text="{Binding Car.Model,UpdateSourceTrigger=PropertyChanged}" FontSize="24"></TextBox>
+            <Label FontSize="16">Year</Label>
+            <TextBox Text="{Binding Car.Year,UpdateSourceTrigger=PropertyChanged}" FontSize="24"></TextBox>
         </StackPanel>
     </Grid>
 </Window>

@@ -19,21 +19,39 @@ namespace WpfApp0415
     /// <summary>
     /// Interaction logic for Info.xaml
     /// </summary>
-    public partial class Info : Window, INotifyPropertyChanged
+    public partial class Info : Window //, INotifyPropertyChanged
     {
-        private Car car;
+        //private Car car;
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged([CallerMemberName] string name = null)
+        //public event PropertyChangedEventHandler PropertyChanged;
+        //protected void OnPropertyChanged([CallerMemberName] string name = null)
+        //{
+        //    PropertyChangedEventHandler handler = PropertyChanged;
+        //    if (handler != null)
+        //    {
+        //        handler(this, new PropertyChangedEventArgs(name));
+        //    }
+        //}
+
+        //public Car InfoCar { get { return car; } set { car = value; OnPropertyChanged(); } }
+
+
+
+
+        public Car Car
         {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(name));
-            }
+            get { return (Car)GetValue(CarProperty); }
+            set { SetValue(CarProperty, value); }
         }
 
-        public Car InfoCar { get { return car; } set { car = value; OnPropertyChanged(); } }
+        // Using a DependencyProperty as the backing store for Car.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty CarProperty =
+            DependencyProperty.Register("Car", typeof(Car), typeof(Info));
+
+
+
+
+
         public Info()
         {
             InitializeComponent();

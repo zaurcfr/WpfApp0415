@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp0415" xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Title" Height="450" Width="800" WindowStartupLocation="CenterScreen">
 
     <!--<Window.Resources>
         <SolidColorBrush x:Key="PrimaryColor">Orange</SolidColorBrush>
@@ -77,7 +77,8 @@
 
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
@@ -94,7 +95,16 @@
         </ListBox>
 
         <Button Grid.Row="1" FontSize="24" FontWeight="SemiBold" FontFamily="Segoe UI" Name="AddBtn" Content="Add" Click="AddBtn_Click"></Button>
-        
+
+        <!--<TextBlock Grid.Row="2" FontSize="24" FontFamily="Segoe UI" FontWeight="SemiBold" Name="txtblock"
+                   Foreground="SpringGreen"
+                   Background="{Binding RelativeSource={RelativeSource Self},Path=Foreground}"
+                   Text="{Binding RelativeSource={RelativeSource Self},Path=Name}"></TextBlock>-->
+
+        <TextBlock Grid.Row="2" FontSize="24" FontFamily="Segoe UI" FontWeight="SemiBold" Name="txtblock"
+                   Foreground="MediumBlue"
+                   Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}},Path=Title}"></TextBlock>
+
 
     </Grid>
 
